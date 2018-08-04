@@ -1,0 +1,34 @@
+.main-body a {
+	color: #00A8B4;
+	font-size: 12px;
+}
+.main-container p{
+	text-indent: 22px;
+}
+.main-body a:hover {
+	text-decoration: none;
+	color: #F98A1F;
+}
+
+.main-body-item h1 {
+	color: #00a8b4;
+	font-size: 16px;
+	font-weight: normal;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom: 1px dotted #dddddd;
+}
+
+p {
+	padding-left: 30px;
+	font-size: 12px;
+}
+
+#search {
+	margin: 30px 10px 15px;
+}
+
+.textbox {
+	background: whitesmoke;
+	border: 1px solid #C4E1E1;
+}

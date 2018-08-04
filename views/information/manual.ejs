@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-item {
+				display: table-cell;
+			}
+			
+			#main-body-left {
+				width: 70%;
+			}
+			
+			#main-body-right {
+				border-left: 1px dotted #80a3bd;
+				padding-left: 5px;
+				width: 30%;
+			}
+			
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			
+			.main-body-item ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			.main-body-item a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" class="main-body-item">
+							<h1>技术出版物与手册</h1>
+							<p style="font-weight: bold;">隔离器、环形器、衰减器、连接器参考手册</p>
+							<ul>
+								<li><img src="../img/information/Page40pdf.png"/><a href="../data/attenshortCH201703.pdf">衰减器 连接器参考手册(中文版) </a>(添加于 4-10)</li>
+								<li><img src="../img/information/Page40pdf.png"/><a href="../data/ISOSHORTCH201703.pdf">环形器 隔离器参考手册(中文版) </a>(添加于 4-10)</li>
+							</ul>
+
+						</div>
+						<div id="main-body-right" class="main-body-item">
+						
+							<%-include('./right')%>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%-include('../footer')%>
+		</div>
+			<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+			<script type="text/javascript" src="../js/header.js"></script>
+			<script type="text/javascript">
+			</script>
+	</body>
+
+</html>

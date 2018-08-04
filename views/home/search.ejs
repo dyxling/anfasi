@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<style type="text/css">
+		#main-body li{
+			height: 50px;
+		}
+		#main-body li a{
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.noresult{
+			font-size: 16px;
+			font-weight: bold;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div id="main-body" class="main-body">
+				<%-include('../product/searchmode')%>
+				<div class="products" id="products">
+					<div class="products-nav">
+						<a href="/" style="text-decoration: none;color: white;">主页</a>>
+						<a id="products-nav-title">搜索结果</a>
+					</div>
+					<div class="products-introduction">
+						<br />
+						<h1 id="view-title">关键词“<%=kwd%>”的搜索结果</h1>
+						<hr />
+					</div>
+				</div>
+				<div id="products-list" class="products-list">
+					<ul>
+					<%if(results!=''){%>
+						<%for(var i=0,j=results.length;i<j;i++){%>
+						<li>
+					    <a href="searchret?pname=<%=encodeURIComponent(results[i].p_name)%>"><%=results[i].p_name%></a>
+					    <span>(共搜素到<%=results[i].num%>条结果)</span><br />
+					  </li>
+					  <%}%>
+				<%}else{%>
+					<li><span class="noresult">没有找到匹配的结果，建议您更换关键字</span></li>
+				<%}%>
+				</ul>
+
+				</div>
+			<%-include('../footer')%>
+		</div>
+
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+	</body>
+
+</html>

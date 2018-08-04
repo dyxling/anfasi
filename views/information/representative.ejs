@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			#main-body-left{
+				width: 60%;
+			}
+			#main-body-right {
+				border-left: 1px dotted #80a3bd;
+				padding-left: 5px;
+				width: 40%;
+			}
+			
+			.main-body-item {
+				display: table-cell;
+			}
+			
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			.textbox {
+				margin-left: 20px;
+			}
+			.display-table{
+				width: 100%;
+			}
+			.title {
+				color: #00A8B4;
+				font-size: 14px;
+			}
+			input[type=button]:hover{
+				cursor: pointer;
+				background: #C4E1E1;
+			}
+			.main-body-item ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			.main-body-item a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" style="border: none;" class="main-body-item">
+							<h1>搜索销售代表:</h1>
+							<table class="display-table">
+								<tr>
+									<td style="text-align: center;">
+										<p class="title"><p class="title">中国片区</p></p>
+									</td>
+									<td style="text-align: center;">
+										<p class="title">国际片区</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">
+										<select class="textbox" id="loc_value">
+											<option value="bj">北京</option>
+											<option value="tj">天津</option>
+											<option value="cq">重庆</option>
+											<option value="sh">上海</option>
+											<option value="hlj">黑龙江</option>
+											<option value="jl">吉林</option>
+											<option value="ln">辽宁</option>
+											<option value="hb">河北</option>
+											<option value="ah">安徽</option>
+											<option value="fj">福建</option>
+											<option value="gs">甘肃</option>
+											<option value="gd">广东</option>
+											<option value="gx">广西</option>
+											<option value="gz">贵州</option>
+											<option value="hain">海南</option>
+											<option value="hen">河南</option>
+											<option value="hub">湖北</option>
+											<option value="hun">湖南</option>
+											<option value="js">江苏</option>
+											<option value="zj">浙江</option>
+											<option value="jx">江西</option>
+											<option value="nmg">内蒙古</option>
+											<option value="nx">宁夏</option>
+											<option value="qh">青海</option>
+											<option value="sd">山东</option>
+											<option value="sx">山西</option>
+											<option value="shanx">陕西</option>
+											<option value="sc">四川</option>
+											<option value="xz">西藏</option>
+											<option value="xj">新疆</option>
+											<option value="yn">云南</option>
+										</select>
+									</td>
+									<td style="text-align: center;">
+										<select class="textbox" disabled="disabled">
+											<option>请选择:</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="text-align: center;">
+									<td><input type="button" value="提交" class="textbox"></td>
+									<td><input type="button" value="提交" class="textbox" disabled="disabled"></td>
+								</tr>
+							</table>
+							<p>如果您所在区域不在列表中，请直接与我们联系:</p>
+							<ul>
+								<li>电话: 86 25 52122735 </li>
+								<li>传真: 86 25 52122775 </li>
+							</ul>
+						</div>
+						<div id="main-body-right" class="main-body-item">
+							<h1>搜索结果:</h1>
+							<div><span id="result"></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%-include('../footer')%>
+		</div>
+			<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+			<script type="text/javascript" src="../js/header.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				var result=$('input[type=button]');
+			    result.on('click',function(){
+				    var lv=$('#loc_value').val();
+				    $.get('/form/representative',{'province':lv},function(data){
+				    	var re="";
+				    	for(var i in data){
+				    		re+=data[i]+'<br>';
+				    	}
+				    	$('#result').html(re);
+				    });
+			    });
+			});
+			
+			</script>
+	</body>
+
+</html>

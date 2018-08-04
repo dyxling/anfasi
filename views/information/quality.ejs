@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+				table-layout: fixed;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			.main-body-item {
+				display: table-cell;
+			}
+			#main-body-left{
+				width: 70%;
+			}
+			#pic-list {
+				list-style: none;
+			}
+			#pic-list li{
+				float: left;
+				width: 40%;
+				height: 300px;
+				text-align: center;
+			}
+			#pic-list img{
+				height: 200px;
+				border: 1px solid #4D4D4F;
+			}
+			#pic-list img:hover{
+				cursor: pointer;
+			}
+			#main-body-right {
+				border-left: 1px dotted #80a3bd;
+				width: 30%;
+			}			
+			
+			p{
+				line-height: 150%;
+				margin: 3px;
+			}
+			#main-body-right ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+				font-size: 12px;
+				margin: 3px;
+			}
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			#pic-cover{
+				display: none;
+				z-index: 111;
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.7);
+				overflow: scroll;
+			}
+			#pic-cover img{
+				border: 1px solid #4E646F;
+				position: relative;
+				top: 10px;
+				left: 50%;
+				width: 800px;
+				margin-left: -400px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" style="border: none;" class="main-body-item">
+							<h1>质量体系</h1>
+							<ul id="pic-list">
+								<li><img src="../img/iso14001.jpg" title="ISO 14001:2004认证"/><h5></h5><span>公司通过ISO 14001:2004认证</span></li>
+								<li><img src="../img/iso14001en.jpg" title="ISO 14001:2004认证"/><h5></h5><span>公司通过ISO 14001:2004认证</span></li>
+								<li><img src="../img/iso9001.jpg" title="ISO 9001:2008认证"/><h5></h5><span>公司通过ISO 9001:2008认证</span></li>
+								<li><img src="../img/policy.png" title="公司的质量方针"/><h5></h5><span>公司的质量方针与目标</span></li>
+								<li><img src="../img/conflict.png" title="冲突矿物管理"/><h5></h5><span>冲突矿物管理</span></li>
+								<li><img src="../img/she.jpg" title="安全环境方针"/><h5></h5><span>安全健康环境方针</span></li>
+								
+							</ul>
+						</div>
+						<div id="main-body-right" class="main-body-item">
+							<h1>我们的使命</h1>
+							<p>本公司的整体质量使命是确保所有的产品，服务和技术支持提供给我们的客户是最高水平的要求，并为客户提供一个安全，有成本效益和有保障的技术优势。为我们的客户提供产品或服务的每一个人都必须致力于为实现组织的目标付出所有必要的努力。</p>
+							<ul>
+								<li>设计，制造和按时交付，一个持续高质量的产品，将按预期执行。</li>
+								<li>以一个经济、迅速的方式强调客户满意度并保持服务质量。</li>
+								<li>基于公司内部所有员工的全面质量管理，推动动态质量改进计划。</li>
+								<li>通过持续的培训，强调质量改进和“第一次做正确”的方法来预防缺陷。</li>
+								<li>进行增值工作，并充分满足客户的需要。</li>
+								<li>在产品和服务的所有领域公开沟通和所有员工一起工作以改善绩效。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<%-include('../footer')%>
+		</div>
+		<div id="pic-cover">
+			<img id="zoom" />
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#pic-list").on("click","img",function(){
+					$("#pic-cover").css("display","block");
+					$("#zoom").attr("src",$(this).attr("src"));
+				});
+				$("#pic-cover").on("click",function(){
+					if($("#pic-cover").css("display")==="block"){
+						$("#pic-cover").css("display","none");
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

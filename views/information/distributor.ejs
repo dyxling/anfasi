@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-item{
+				display: table-cell;
+				box-sizing: border-box;
+			}
+			#main-body-left{
+				width: 70%;
+				
+			}
+			#main-body-right{
+				width: 30%;
+				border-left: 1px dotted #8F8F8F;
+			}
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			table{
+				text-align: left;
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+			.main-back{
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			.main-body-right{
+				border-left: 1px dotted #80a3bd;
+				padding-left: 5px;
+			}
+			#main-body-right ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			.main-body-item a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+		<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" class="main-body-item">
+							<h1>分销商及装运服务</h1>
+							<p>安法斯已经与各级分销商合作提供高度可靠的射频和微波组件，包括：衰减器，负载，连接器，隔离器，环形器等。</p>
+						<table>
+							<tr>
+								<th style="padding-right: 50px;">分销商</th>
+								<th>联系方式</th>
+							</tr>
+							<tr>
+								<td><a>安法斯公司</a></td>
+								<td>电话: 86 25 52122735 </td>
+							</tr>
+						</table>	
+						</div>
+						<div id="main-body-right" class="main-body-item">
+						
+							<%-include('./right')%>
+
+
+						</div>
+					</div>
+				</div> 
+			</div>
+
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+</html>

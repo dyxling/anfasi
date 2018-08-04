@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-item {
+				display: table-cell;
+				box-sizing: border-box;
+			}
+			
+			#main-body-left {
+				width: 70%;
+				border-right: 1px dotted #8F8F8F;
+			}
+			
+			#main-body-right {
+				padding-left: 5px;
+				width: 30%;
+			}
+			
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			.highlight {
+				color: #FF0000;
+				font-weight: bold;
+			}
+			
+			table {
+				margin-left: 30px;
+				text-align: left;
+			}
+			
+			.textbox {
+				width: 100%;
+			}
+			
+			.textarea {
+				height: 50px;
+				width: 100%;
+				background: whitesmoke;
+				border: 1px solid #C4E1E1;
+			}
+			
+			#parttwo {
+				border-top: 1px solid #8996A0;
+				margin: 10px 15px 10px 30px;
+			}
+			#submit {
+				color: #737373;
+				background: linear-gradient(top, #f7f7f7 0, #cccccc 100%) no-repeat;
+				box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+				border-collapse: separate;
+				border-radius: 4px;
+				height: 25px;
+				padding: 0 15px;
+				white-space: nowrap;
+				cursor: pointer;
+				margin-left: 35%;
+			}
+			#main-body-right ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			.main-body-item a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" class="main-body-item">
+							<h1>子系统设计需求表</h1>
+							<p>请帮助我们提供一个符合您需求的子系统并将其发送到我们的销售部门。</p>
+							<p><span class="highlight">*关注领域</span></p>
+							<form id="subsystem_form">
+							<div id="partone">
+								<table id="partone">
+									<tr>
+										<td>名称<span class="highlight">*</span></td>
+										<td><input type="text" class="textbox" name="name"></td>
+									</tr>
+									<tr>
+										<td>标题</td>
+										<td><input type="text" class="textbox" name="title"></td>
+									</tr>
+									<tr>
+										<td>公司<span class="highlight">*</span></td>
+										<td><input type="text" class="textbox" name="company"></td>
+									</tr>
+									<tr>
+										<td>地址<span class="highlight">*</span></td>
+										<td><textarea class="textarea" name="addr"></textarea></td>
+									</tr>
+									<tr>
+										<td>国家</td>
+										<td><input type="text" class="textbox" name="country"></td>
+									</tr>
+									<tr>
+										<td>电子邮箱<span class="highlight">*</span></td>
+										<td><input type="text" class="textbox" name="email"></td>
+									</tr>
+									<tr>
+										<td>电话</td>
+										<td><input type="text" class="textbox" name="tel"></td>
+									</tr>
+									<tr>
+										<td>传真</td>
+										<td><input type="text" class="textbox" name="fax"></td>
+									</tr>
+								</table>
+							</div>
+							<div id="parttwo">
+								<table style="margin-left: 0px;">
+									<tr>
+										<td>1.简要的描写产品需求:</td>
+										<td><textarea class="textarea" name="des"></textarea></td>
+									</tr>
+									<tr>
+										<td>2.附录图表文件:</td>
+										<td><input type="file" value="选择文件" name="upload"></td>
+									</tr>
+									<tr>
+										<td>3.模型类型:</td>
+										<td>
+											<input type="radio" name="matrixtype">Common Highway<br />
+											<input type="radio" name="matrixtype">Full Access Blocking<br />
+											<input type="radio" name="matrixtype">Full Access Non-Blocking<br />
+										</td>
+									</tr>
+									<tr>
+										<td>4.频率范围(所有接口)</td>
+										<td>最小值<br/><textarea class="textarea" style="width: 180px;" name="min"></textarea></td>
+										<td>最大值<br/><textarea class="textarea" style="width:180px" name="max"></textarea></td>
+									</tr>
+									<tr>
+										<td>5.互调失真</td>
+										<td><input type="text" class="textbox" name="imp"></td>
+									</tr>
+									<tr>
+										<td>6.驻波(所有接口)</td>
+										<td><input type="text" class="textbox" name="vswr"></td>
+									</tr>
+									<tr>
+										<td>7.功率(所有接口)</td>
+										<td><input type="text" class="textbox" name="power"></td>
+									</tr>
+									<tr>
+										<td>8.控制类型</td>
+										<td>
+											<input type="checkbox" name="cf1">IEEE-488<br />
+											<input type="checkbox" name="cf2">RS-232(Serial)<br />
+											<input type="checkbox" name="cf3">Ethernet(10 BaseT)
+										</td>
+									</tr>
+									<tr>
+										<td><input type="submit" value="提交需求" id="submit"></td>
+									</tr>
+								</table>
+							</div>
+							</form>
+						</div>
+						<div id="main-body-right" class="main-body-item">
+							<div id="search"><input type="text" placeholder="Search Product Catalog" style="width: 70%;margin-right: 10px;"><img src="../img/btn_go.gif"></div>
+							<h1>产品目录与内容下载</h1>
+							<ul>
+								<li><span>您可以在我们的网站上下载所有的产品目录及内容，也可以只下载特定产品的内容:</span>
+								</li>
+								<li>
+									<a href="../data/Amphars-NJ-product-catalog-20161103.pdf">下载所有产品目录</a>
+								</li>
+								<li>
+									<a href="../data/Amphars-NJ-product-catalog-20161103.pdf">固定衰减器</a>
+								</li>
+								<li>
+									<a href="../data/Amphars-NJ-product-catalog-20161103.pdf">环形器及隔离器</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var sub=$('#submit');
+			sub.on('click',function(){
+				var fvalue=$('#subsystem_form').serialize();
+				$.get('/',fvalue,function(data){
+					alert("success!");
+				});
+			});
+		});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<style type="text/css">
+			.products-list table {
+				width: 100%;
+				text-align: center;
+				border-collapse: collapse;
+			}
+			.products-list table thead th{
+				background: #DDDDDD;
+			}
+			.products-list table tbody tr{
+				height: 30px;
+			}
+			.products-list table tbody tr:nth-child(2n){
+				background: #E2E2E2;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+<!--主内容开始-->
+			<div id="main-body" class="main-body">
+				<%-include('searchmode')%>
+				<div class="products" id="products">
+					<div class="products-nav">
+						<a href="/" style="text-decoration: none;color: white;">主页</a>>
+						<a id="products-nav-title">环形器与隔离器</a>
+					</div>
+					<div class="products-introduction">
+						<br />
+						<h1 id="view-title"><%=proinfo[0].p_name%></h1>
+						<hr />
+					</div>
+				</div>
+				<div id="products-list" class="products-list">
+					<table>
+						<thead>
+							<tr>
+								<th>频率范围</th>
+								<th>类别</th>
+								<th>反向隔离</th>
+								<th>正向损耗</th>
+								<th>驻波</th>
+								<th>正/反向功率</th>
+								<th>互调失真</th>
+								<th>工作温度</th>
+								<th>尺寸 L*W*H</th>
+								<th>外形图</th>
+								<th>型号</th>
+								<th>相对带宽</th>
+							</tr>
+							<tr>
+								<th>(MHz)</th>
+								<th></th>
+								<th>(dB)min</th>
+								<th>(dB)max</th>
+								<th>max</th>
+								<th>Fwd/Rev (W)</th>
+								<th>(dBC) max</th>
+								<th>Temp (℃)</th>
+								<th>(mm)</th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="products-list-content" class="products-list-content">
+							<%for(var i=0,j=proinfo.length;i<j;i++){%>
+								<tr>
+									<td><%=proinfo[i].freq_low%> - <%=proinfo[i].freq_high%></td>
+									<td><%=proinfo[i].type%></td>
+									<td><%=proinfo[i].isolation%></td>
+									<td><%=proinfo[i].insloss%></td>
+									<td><%=proinfo[i].vswr%></td>
+									<td><%=proinfo[i].fwd_power%>/<%=proinfo[i].rev_power%></td>
+									<td><%=proinfo[i].imd%></td>
+									<td><%=proinfo[i].temp_low%> - <%=proinfo[i].temp_high%></td>
+									<td><%=proinfo[i].size%></td>
+									<td><%=proinfo[i].outline%></td>
+									<td><%=proinfo[i].part_number%></td>
+									<td><%=proinfo[i].bandwidth%></td>
+								</tr>
+							<%}%>
+						</tbody>
+					</table>
+
+				</div>
+
+			</div>
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<style type="text/css">
+			.products-list a {
+				font-size: 13px;
+			}
+			
+			.products-list img {
+				width: 60px;
+				border: 1px solid #8996A0;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div id="main-body" class="main-body">
+				<%-include('searchmode')%>
+				<div class="products" id="products">
+					<div class="products-nav">
+						<a href="/" style="text-decoration: none;color: white;">主页</a>>
+						<a>负载</a>
+					</div>
+					<div class="products-introduction">
+						<br />
+						<h1>负载</h1>
+						<hr />
+					</div>
+				</div>
+				<div id="products-list" class="products-list">
+					<table>
+						<tr>
+							<td><img src="../img/att_simu_termi/1-2termination1.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('1 瓦和 2 瓦经济型负载')%>">1 瓦和 2 瓦经济型负载</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/0.5-1termination.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('0.5 瓦和 1 瓦负载')%>">0.5 瓦和 1 瓦负载</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/2termination3.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('2 瓦负载')%>">2 瓦负载</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/5termination2.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('5 瓦负载，风冷方式')%>">5 瓦负载，风冷方式</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/10termination.png" /></td>
+							<td>
+							<a href="../product/viewtermination?pname=<%=encodeURIComponent('10 瓦负载，风冷方式')%>">10 瓦负载，风冷方式</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/25termination.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('25 瓦负载，风冷方式')%>">25 瓦负载，风冷方式</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/50termination.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('50 瓦负载，风冷方式')%>">50 瓦负载，风冷方式</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/100termination.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('100 瓦负载，风冷方式')%>">100 瓦负载，风冷方式</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/150termination.png" /></td>
+							<td>
+								<a href="../product/viewtermination?pname=<%=encodeURIComponent('150 瓦负载，风冷方式')%>">150 瓦负载，风冷方式</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/att_simu_termi/300termination.png" /></td>
+							<td>
+							<a href="../product/viewtermination?pname=<%=encodeURIComponent('300 瓦负载，风冷方式')%>">300 瓦负载，风冷方式</a>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+
+			</div>
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#products-list").on("click", "a", function() {
+					var addr = "../viewitem/viewtermination.html";
+					var proname = encodeURIComponent($(this).text());
+					window.location.href = addr + "?proname=" + proname;
+				});
+			});
+		</script>
+	</body>
+
+</html>

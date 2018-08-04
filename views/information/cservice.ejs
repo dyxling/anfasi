@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+				line-height: 200%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-item {
+				display: table-cell;
+			}
+			
+			#main-body-left {
+				width: 70%;
+				border-right: 1px dotted #8F8F8F;
+				padding-right: 5px;
+			}
+			
+			#main-body-right {
+				padding-left: 5px;
+				width: 30%;
+			}
+			
+			.main-body-item ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			.main-body-item a{
+				text-decoration: none;
+			}
+			
+			dl {
+				margin-left: 20%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" class="main-body-item">
+							<h1>客户服务</h1>
+							<p>安法斯通讯技术有限公司致力于提供快速、专业的客户服务与支持。我们的专业人员都受过良好的训练。我们始终致力于为客户提供优质服务，并且所有维修和测试服务都是可用的。</p>
+							<p>我们为客户提供以下服务。</p>
+							<ul>
+								<li>数据测试</li>
+								<li>维修服务</li>
+								<li>电话或电子邮件咨询</li>
+							</ul>
+							<dl style="margin-left: 100px;">
+								<dt>电话: 86 25 52122735 </dt>
+								<dt>传真: 86 25 52122775 </dt>
+							</dl>
+							<p>报修流程:</p>
+							<ol>
+								<li>联系我们的销售部门</li>
+								<li>提供以下信息。
+								<ul>
+									<li>产品型号或编号</li>
+									<li>订单号码或者发票</li>
+									<li>接收账单的地址</li>
+								</ul>
+								</li>
+							</ol>
+							<p>退货流程:</p>
+							<p>在退货时请尽量使用原包装密封产品。</p>
+							<ol>
+								<li>请先包装好产品。</li>
+								<li>在包装上写上识别码</li>
+								<li>在包装上贴上易碎标志</li>
+							</ol>
+							<dl>
+								<dd>客户服务部</dd>
+								<dd>南京江宁经济技术开发区 双龙大道 1706号</dd>
+							</dl>
+						</div>
+						<div id="main-body-right" class="main-body-item">
+							
+							<%-include('./right')%>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>

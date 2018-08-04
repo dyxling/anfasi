@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			#main-body-left {
+				border-right: 1px dotted #80a3bd;
+				width: 70%;
+			}
+			
+			#main-body-right {
+				padding-left: 5px;
+				width: 30%;
+			}
+			
+			.main-body-item {
+				display: table-cell;
+			}
+			
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			.boldtitle {
+				margin-right: 20px;
+				font-weight: bold;
+			}
+			
+			table {
+				border-collapse: collapse;
+			}
+			
+			.highlight {
+				color: #FF0000;
+			}
+			
+			#order {
+				margin-left: 190px;
+			}
+			#submit {
+				color: #737373;
+				background: linear-gradient(top, #f7f7f7 0, #cccccc 100%) no-repeat;
+				box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+				border-collapse: separate;
+				border-radius: 4px;
+				height: 25px;
+				padding: 0 15px;
+				white-space: nowrap;
+				cursor: pointer;
+				margin-left: 35%;
+			}
+			#main-body-right ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			.main-body-item a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" class="main-body-item">
+							<h1>客户满意度调查</h1>
+							<p>根据您的体验与经历，请对我们的服务进行评价(没有的项可不填)。</p>
+							<form id="survey_form">
+							<p>客户订单#:<span id="order"><input type="text" class="textbox" name="orders"></span></p>
+							<table>
+								<tr>
+									<td></td>
+									<td>总是</td>
+									<td>时常</td>
+									<td>偶尔</td>
+									<td>从不</td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">1.产品质量符合您的标准。</td>
+									<td><input type="radio" name="quality" value="always"></td>
+									<td><input type="radio" name="quality" value="often"></td>
+									<td><input type="radio" name="quality" value="sometimes"></td>
+									<td><input type="radio" name="quality" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">2.产品规格满足您的要求。</td>
+									<td><input type="radio" name="spec" value="always"></td>
+									<td><input type="radio" name="spec" value="often"></td>
+									<td><input type="radio" name="spec" value="sometimes"></td>
+									<td><input type="radio" name="spec" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">3.产品价格合理。</td>
+									<td><input type="radio" name="price" value="always"></td>
+									<td><input type="radio" name="price" value="often"></td>
+									<td><input type="radio" name="price" value="sometimes"></td>
+									<td><input type="radio" name="price" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">4. 对技术问题能及时并正确反应。</td>
+									<td><input type="radio" name="response" value="always"></td>
+									<td><input type="radio" name="response" value="often"></td>
+									<td><input type="radio" name="response" value="sometimes"></td>
+									<td><input type="radio" name="response" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">5. 产品运送准时。</td>
+									<td><input type="radio" name="logistics" value="always"></td>
+									<td><input type="radio" name="logistics" value="often"></td>
+									<td><input type="radio" name="logistics" value="sometimes"></td>
+									<td><input type="radio" name="logistics" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">6. 产品运送中与您保持联系。</td>
+									<td><input type="radio" name="contact" value="always"></td>
+									<td><input type="radio" name="contact" value="often"></td>
+									<td><input type="radio" name="contact" value="sometimes"></td>
+									<td><input type="radio" name="contact" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;border-bottom: 2px solid #8996A0;padding-bottom: 10px;">7. 倾听客户的声音并满足要求。</td>
+									<td style="border-bottom: 2px solid #8996A0;padding-bottom: 10px;"><input type="radio" name="listen" value="always"></td>
+									<td style="border-bottom: 2px solid #8996A0;padding-bottom: 10px;"><input type="radio" name="listen" value="often"></td>
+									<td style="border-bottom: 2px solid #8996A0;padding-bottom: 10px;"><input type="radio" name="listen" value="sometimes"></td>
+									<td style="border-bottom: 2px solid #8996A0;padding-bottom: 10px;"><input type="radio" name="listen" value="never"></td>
+								</tr>
+								<tr>
+									<td>
+										<p class="boldtitle">总体满意度</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">8. 是一家重要的供应商。</td>
+									<td><input type="radio" name="importance" value="always"></td>
+									<td><input type="radio" name="importance" value="often"></td>
+									<td><input type="radio" name="importance" value="sometimes"></td>
+									<td><input type="radio" name="importance" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">9. 值得信赖。</td>
+									<td><input type="radio" name="trust" value="always"></td>
+									<td><input type="radio" name="trust" value="often"></td>
+									<td><input type="radio" name="trust" value="sometimes"></td>
+									<td><input type="radio" name="trust" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">10. 良好的技术支持。</td>
+									<td><input type="radio" name="support" value="always"></td>
+									<td><input type="radio" name="support" value="often"></td>
+									<td><input type="radio" name="support" value="sometimes"></td>
+									<td><input type="radio" name="support" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">11. 反应及时。</td>
+									<td><input type="radio" name="timely" value="always"></td>
+									<td><input type="radio" name="timely" value="often"></td>
+									<td><input type="radio" name="timely" value="sometimes"></td>
+									<td><input type="radio" name="timely" value="never"></td>
+								</tr>
+								<tr>
+									<td style="padding-left: 30px;">12. 良好的销售服务。</td>
+									<td><input type="radio" name="service" value="always"></td>
+									<td><input type="radio" name="service" value="often"></td>
+									<td><input type="radio" name="service" value="sometimes"></td>
+									<td><input type="radio" name="service" value="never"></td>
+								</tr>
+							</table>
+							<p class="boldtitle">请在这里写下您关心的问题:</p>
+							<p><textarea class="textbox" name="comment" style="width: 300px;"></textarea></p>
+							<p class="boldtitle">请提出一项我们应该改善的方面。</p>
+							<p><textarea class="textbox" name="des" style="width: 300px;"></textarea></p>
+							<p>请填写您的公司名称与地址以便我们更好地为您服务。</p>
+							<p><span class="highlight">*</span>名称:</br><input type="text" class="textbox" name="pname"></p>
+							<p><span class="highlight">*</span>电子邮件:</br><input type="text" class="textbox" name="email"></p>
+							<p><span class="highlight">*</span>公司名称:</br><input type="text" class="textbox" name="cname"></p>
+							<p>电话:</br><input type="text" class="textbox" name="tel"></p>
+							<p>地址 1:</br><input type="text" class="textbox" name="addr1"></p>
+							<p>地址 2:</br><input type="text" class="textbox" name="addr2"></p>
+							<table style="margin-left: 30px;">
+								<tr>
+									<td>省份:</td>
+									<td>城市:</td>
+									<td>邮编:</td>
+								</tr>
+								<tr>
+									<td><input type="text" class="textbox" name="province"></td>
+									<td><input type="text" class="textbox" name="city"></td>
+									<td><input type="text" class="textbox" name="postcode"></td>
+								</tr>
+							</table>
+							<p>国家</p>
+							<div>
+								<select class="textbox" style="margin-left: 30px;" name="country">
+									<option> 中 国 </option>
+									<option> 其 它 </option>
+								</select>
+							</div>
+							<p><input type="button" value="提交" id="submit"/></p>
+							</form>
+						</div>
+						<div id="main-body-right" class="main-body-item">					
+							<%-include('./right')%>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var sub=$('#submit');
+			sub.on('click',function(){
+				var fvalue=$('#survey_form').serialize();
+				$.get('/form/csurvey',fvalue,function(data){
+					alert("提交成功!");
+				});
+			});
+		});
+		</script>
+	</body>
+
+</html>

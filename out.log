@@ -1,0 +1,68 @@
+Express server listening on port 3000
+[90mGET / [36m304 [90m476ms[0m
+[90mGET /css/main.css [36m304 [90m15ms[0m
+[90mGET /img/logo.jpg [36m304 [90m15ms[0m
+[90mGET /img/search.png [36m304 [90m15ms[0m
+[90mGET /img/btn_go.gif [36m304 [90m15ms[0m
+[90mGET /img/isolator.png [36m304 [90m15ms[0m
+[90mGET /img/attenuator.jpg [36m304 [90m15ms[0m
+[90mGET /js/jquery-1.12.4.min.js [36m304 [90m16ms[0m
+[90mGET /img/btn_back.gif [36m304 [90m16ms[0m
+[90mGET /js/header.js [36m304 [90m0ms[0m
+[90mGET /img/slider.jpg [36m304 [90m1ms[0m
+[90mGET /img/lightgrey.png [36m304 [90m1ms[0m
+[90mGET /img/postexpand.png [36m304 [90m2ms[0m
+[90mGET /img/postbullets.png [36m304 [90m6ms[0m
+[90mGET /home/news_detail?ntitle=%E5%AE%89%E6%B3%95%E6%96%AF%E7%BD%91%E7%AB%99%E8%AF%95%E8%BF%90%E8%90%A5 [32m200 [90m63ms - 8.32kb[0m
+[90mGET /css/main.css [36m304 [90m0ms[0m
+[90mGET /img/logo.jpg [36m304 [90m15ms[0m
+[90mGET /img/search.png [36m304 [90m15ms[0m
+[90mGET /css/information.css [32m200 [90m15ms - 465b[0m
+[90mGET /js/jquery-1.12.4.min.js [36m304 [90m0ms[0m
+[90mGET /js/header.js [36m304 [90m0ms[0m
+[90mGET /img/slider.jpg [36m304 [90m0ms[0m
+[90mGET /img/postbullets.png [36m304 [90m15ms[0m
+[90mGET /img/lightgrey.png [36m304 [90m15ms[0m
+[90mGET /home/news [32m200 [90m0ms - 7.27kb[0m
+[90mGET /css/main.css [36m304 [90m0ms[0m
+[90mGET /css/information.css [36m304 [90m0ms[0m
+[90mGET /img/logo.jpg [36m304 [90m0ms[0m
+[90mGET /img/search.png [36m304 [90m15ms[0m
+[90mGET /js/jquery-1.12.4.min.js [36m304 [90m0ms[0m
+[90mGET /js/header.js [36m304 [90m0ms[0m
+[90mGET /img/slider.jpg [36m304 [90m0ms[0m
+[90mGET /img/lightgrey.png [36m304 [90m0ms[0m
+[90mGET /img/postbullets.png [36m304 [90m15ms[0m
+[90mGET /home/news_detail?ntitle=%E6%96%B0%E4%B8%80%E4%BB%A3%E4%BD%8E%E5%8A%9F%E8%80%97%E5%9B%BA%E5%AE%9A%E8%A1%B0%E5%87%8F%E5%99%A8%E4%B8%8E%E8%B4%9F%E8%BD%BD [32m200 [90m31ms - 8.35kb[0m
+[90mGET /css/main.css [36m304 [90m15ms[0m
+[90mGET /img/logo.jpg [36m304 [90m0ms[0m
+[90mGET /js/jquery-1.12.4.min.js [36m304 [90m0ms[0m
+[90mGET /js/header.js [36m304 [90m0ms[0m
+[90mGET /img/search.png [36m304 [90m0ms[0m
+[90mGET /css/information.css [36m304 [90m0ms[0m
+[90mGET /img/slider.jpg [36m304 [90m0ms[0m
+[90mGET /img/postbullets.png [36m304 [90m0ms[0m
+[90mGET /img/lightgrey.png [36m304 [90m0ms[0m
+[90mGET /home/contact [32m200 [90m16ms - 5.81kb[0m
+[90mGET /css/main.css [36m304 [90m1ms[0m
+[90mGET /img/logo.jpg [36m304 [90m2ms[0m
+[90mGET /img/search.png [36m304 [90m0ms[0m
+[90mGET /img/contact.png [32m200 [90m0ms - 29.86kb[0m
+[90mGET /js/jquery-1.12.4.min.js [36m304 [90m15ms[0m
+[90mGET /js/header.js [36m304 [90m0ms[0m
+[90mGET /img/slider.jpg [36m304 [90m0ms[0m
+[90mGET /img/lightgrey.png [36m304 [90m3ms[0m
+[90mGET / [36m304 [90m50ms[0m
+[90mGET /css/main.css [36m304 [90m0ms[0m
+[90mGET /img/logo.jpg [36m304 [90m0ms[0m
+[90mGET /img/search.png [36m304 [90m0ms[0m
+[90mGET /img/btn_go.gif [36m304 [90m0ms[0m
+[90mGET /img/isolator.png [36m304 [90m0ms[0m
+[90mGET /img/attenuator.jpg [36m304 [90m0ms[0m
+[90mGET /img/btn_back.gif [36m304 [90m0ms[0m
+[90mGET /js/jquery-1.12.4.min.js [36m304 [90m0ms[0m
+[90mGET /js/header.js [36m304 [90m0ms[0m
+[90mGET /img/postexpand.png [36m304 [90m0ms[0m
+[90mGET /img/slider.jpg [36m304 [90m0ms[0m
+[90mGET /img/lightgrey.png [36m304 [90m0ms[0m
+[90mGET /img/postbullets.png [36m304 [90m0ms[0m

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+				table-layout:fixed;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			.main-body-item {
+				display: table-cell;
+			}
+
+			#main-body-left{
+				width:70%;
+			}
+			#news-list li{
+				font:12px "宋体";
+				height: 30px;
+				/*color: #3a78b3;*/
+				line-height: 30px;
+				border-bottom: 1px #E2E2E2 solid;
+				text-align: left;
+				text-overflow: ellipsis;
+				word-break: keep-all;
+				white-space: nowrap;
+			}
+			#news-list li a{
+				color: #555555;
+				text-decoration: none;
+			}
+			#news-list li a:hover{
+				color: red;
+			}
+			#news-list li span{
+				float: right;
+				font:11px/24px "Helvetica";
+				color:rgb(150, 150, 150);
+			}
+			#main-body-right {
+				border-left: 1px dotted #80a3bd;
+				padding-left: 5px;
+				width: 22%;
+			}
+			
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			
+			#main-body-right ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			.main-body-item a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" style="border: none;" class="main-body-item">
+							<h1>新闻</h1>
+							<div id="list">
+								<ul id="news-list">
+									<% for(var i=0,j=news.length;i<j;i++){%>
+										<li><a href="../home/news_detail?ntitle=<%=encodeURIComponent(news[i]['ntitle'])%>"><%=news[i].ntitle%></a><span>[<%=news[i].ndate%>]</span></li>
+									<%}%>
+								</ul>
+							</div>
+						</div>
+						<div id="main-body-right" class="main-body-item">
+							<h1>产品介绍</h1>
+							<ul>
+								<li><a href="../information/faq">隔离器 & 环形器</a></li>
+								<li><a href="../information/faq">同轴衰减器，连接器与负载</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<%-include('../footer')%>
+		</div>
+			<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+			<script type="text/javascript" src="../js/header.js"></script>
+			
+	</body>
+
+</html>

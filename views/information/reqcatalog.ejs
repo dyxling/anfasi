@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+				table-layout: fixed;
+			}
+			
+			.main-body-item {
+				display: table-cell;
+				box-sizing: border-box;
+			}
+			
+			#main-body-left {
+				width: 70%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			#main-body-right {
+				border-left: 1px dotted #80a3bd;
+				padding-left: 5px;
+				width: 22%;
+			}
+			
+			#main-body-right ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+			
+			.main-back {
+				height: 15px;
+				border-top: 1px #80a3bd dotted;
+				text-align: right;
+				margin: 15px 5px 10px 0;
+			}
+			
+			.sigh {
+				color: #FF0000;
+			}
+			
+			#requestform {
+				margin-left: 50px;
+			}
+			
+			#submit {
+				color: #737373;
+				background: linear-gradient(top, #f7f7f7 0, #cccccc 100%) no-repeat;
+				box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+				border-collapse: separate;
+				border-radius: 4px;
+				height: 25px;
+				padding: 0 15px;
+				white-space: nowrap;
+				cursor: pointer;
+				margin-left: 35%;
+			}
+
+			.main-body-item a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" class="main-body-item">
+							<h1>请求产品目录</h1>
+							<p>您可以向我们获取公司的产品目录以及公司的生产能力介绍文档，这些标准产品包括环形器、隔离器、负载等。</p>
+							<p style="font-weight: bold;">请填写以下内容以获取我们手册的副本文件。</p>
+							<form id="request_submit">
+							<table id="requestform">
+								<tr>
+									<td>姓:<span class="sigh">*</span></td>
+									<td><input type="text" class="textbox" name="first_name"></td>
+									<td>名字:<span class="sigh">*</span></td>
+									<td><input type="text" class="textbox" name="last_name"></td>
+								</tr>
+								<tr>
+									<td>公司:<span class="sigh">*</span></td>
+									<td><input type="text" class="textbox" name="company"></td>
+									<td>电子邮箱:</td>
+									<td><input type="text" class="textbox" name="email"></td>
+								</tr>
+								<tr>
+									<td>地址 1:<span class="sigh">*</span></td>
+									<td><input type="text" class="textbox" name="addr1"></td>
+									<td>地址 2:</td>
+									<td><input type="text" class="textbox" name="addr2"></td>
+								</tr>
+								<tr>
+									<td>城市:<span class="sigh">*</span></td>
+									<td><input type="text" class="textbox" name="city"></td>
+									<td>省份:<span class="sigh">*</span></td>
+									<td>
+										<select class="textbox" id="province" name="province">
+											<option>请选择:</option>
+											<option>北京</option>
+											<option>天津</option>
+											<option>重庆</option>
+											<option>上海</option>
+											<option>黑龙江</option>
+											<option>吉林</option>
+											<option>辽宁</option>
+											<option>河北</option>
+											<option>安徽</option>
+											<option>福建</option>
+											<option>甘肃</option>
+											<option>广东</option>
+											<option>广西</option>
+											<option>贵州</option>
+											<option>海南</option>
+											<option>河南</option>
+											<option>湖北</option>
+											<option>湖南</option>
+											<option>江苏</option>
+											<option>浙江</option>
+											<option>江西</option>
+											<option>内蒙古</option>
+											<option>宁夏</option>
+											<option>青海</option>
+											<option>山东</option>
+											<option>山西</option>
+											<option>陕西</option>
+											<option>四川</option>
+											<option>西藏</option>
+											<option>新疆</option>
+											<option>云南</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>邮编:<span class="sigh">*</span></td>
+									<td><input type="text" class="textbox" name="postcode"></td>
+									<td>国家:</td>
+									<td>
+										<select class="textbox" id="country" name="country">
+											<option>中 国</option>
+											<option>其 它</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>电话:</td>
+									<td><input type="text" class="textbox" name="phone"></td>
+									<td>传真:</td>
+									<td><input type="text" class="textbox" name="fax"></td>
+								</tr>
+							</table>
+							<p style="font-weight: bold;">下载并填写产品需求表:</p>
+							<p><input type="checkbox" name="cb1" value="isolator"><span>隔离器与环形器</span>
+							</p>
+							<p><input type="checkbox" name="cb2" value="attenuator"><span>衰减器 连接器 负载</span>
+							</p>
+							<p><a href="../data/requestsheet.xls">点击这里下载产品需求表</a></p>
+							<p>描述:<textarea name="description" class="textbox" style="width: 400px;"></textarea></p>
+							<p>频率范围:<input type="text" class="textbox" name="freq"></p>
+							<p>产品类型:
+								<select class="textbox" class="textbox" name="pname">
+									<option>选择产品类型</option>
+									<option>固定衰减器</option>
+									<option>环形器及隔离器</option>
+								</select>
+							</p>
+							<p>请指明其他产品型号:<input type="text" class="textbox" name="other"></p>
+							<p><input type="button" value="提交" id="submit"><span style="font-size: 11px;color: red;">(请直接下载需求表并发送到sales@amphars.com，谢谢.)</span></p>
+							</form>
+						</div>
+						<div id="main-body-right" class="main-body-item">
+							
+							<%-include('./right')%>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var sub=$('#submit');
+			sub.on('click',function(){
+				var fvalue=$('#request_submit').serialize();
+				$.get('/form/reqcatalog',fvalue,function(data){
+					alert("提交成功!");
+				});
+			});
+		});
+		</script>
+	</body>
+
+</html>

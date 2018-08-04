@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/information.css" />
+		<style>
+			.main-body-table {
+				display: table;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			.main-body-row {
+				display: table-row;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			
+			
+			
+			#main-body-left {
+				width:70%;
+			}
+			
+			#main-body-right {
+				border-left: 1px dotted #80a3bd;
+				padding-left: 5px;
+				width: 22%;
+			}
+			.news-wrapper {
+				width: 96%;
+				text-align: center;
+				margin: 0 auto;
+			}
+			.main-body-item {
+				display: table-cell;
+			}
+			
+			.content-title {
+				text-align: center;
+			}
+			
+			.content-title h2 {
+				color: #235d9b;
+				font: bold 20px/30px "Microsoft YaHei", "宋体";
+			}
+			
+			.content-title h3 {
+				background: #d3f1ff;
+				font: 12px/22px "宋体";
+			}
+			
+			#content-body {
+				font: 14px/26px "宋体", "Microsoft YaHei";
+				text-align: left;
+				text-indent: 24px;
+			}
+			
+			#content-foot {
+				text-align: right;
+				margin:20px auto 10px auto;
+			}
+			#content-foot a{
+				text-decoration: none;
+				color: #525151;
+			}
+			#content-link{
+				background: #d3f1ff;
+				text-align: left;
+				border:1px solid #afcae5;
+			}
+			#content-link ul{
+				list-style: none;				
+			}
+			#content-link ul li{
+				font:12px/20px "宋体";
+				height: 20px;
+				color: #525151;
+			}
+			#main-body-right span {
+				font-weight: bold;
+			}
+			
+			#main-body-right p {
+				line-height: 150%;
+			}
+			
+			#main-body-right ul {
+				list-style-image: url(../img/postbullets.png);
+				line-height: 200%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div class="main-body" id="main-body">
+				<div class="main-body-table">
+					<div class="main-body-table-row">
+						<div id="main-body-left" style="border: none;" class="main-body-item">
+							<div class="news-wrapper">
+								<div class="content-title">
+									<h2 id="news-title"><%=news.ntitle%></h2>
+									<div id="news-author">
+										<h3>发布人：<span id="n-author">Amphars</span>   发布日期：<span id="n-date"><%=news.ndate%></span>   浏览次数：<span>1</span>次       字号：大  中  小</h3></div>
+								</div>
+								<div id="content-body"><p><%=news.ncontent%></p></div>
+								<div id="content-foot">
+									【
+									<a href="javascript:window.print()">打印新闻</a>】【
+									<a href="javascript:window.close()">关闭页面</a>】【
+									<a href="javascript:window.scroll(0,0)">返回顶部</a>】
+								</div>
+								<div id="content-link">
+									<ul>
+										<li>
+											上一条：
+											<%if(news.pre){%>
+												<a href="../home/news_detail?ntitle=<%=encodeURIComponent(news.pre.ntitle)%>"><%=news.pre.ntitle%></a>
+											<%}else{%>
+												<a href="javascript:void(0)">没有了</a>
+											<%}%>
+										</li>
+										<li>
+											下一条：
+											<%if(news.next){%>
+												<a href="../home/news_detail?ntitle=<%=encodeURIComponent(news.next.ntitle)%>"><%=news.next.ntitle%></a>
+											<%}else{%>
+												<a href="javascript:void(0)">没有了</a>
+											<%}%>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div id="main-body-right" class="main-body-item">							
+							<h1>产品介绍</h1>
+							<ul>
+								<li><a href="../information/faq">隔离器 & 环形器</a></li>
+								<li><a href="../information/faq">同轴衰减器，连接器与负载</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<style type="text/css">
+			.products-list a {
+				font-size: 13px;
+			}
+			
+			.products-list tr>td:first-child {
+				height: 60px;
+				width: 60px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div id="main-body" class="main-body">
+				<div id="search-catalog" class="search-catalog">
+					<table>
+						<tr>
+							<td>
+								<h3>搜索产品目录</h3>
+								<p>
+									<select>
+										<option>按类型</option>
+										<option>按关键字</option>
+									</select><input type="text" /><button>搜索</button>
+								</p>
+								<p>
+									<input type="radio" value="all" name="range" /><span>在所有产品中搜素</span><input type="radio" name="range" /><span>在此类产品中搜索</span>
+								</p>
+							</td>
+							<!--<td class="search-cart" style="width: 30%;">
+								<button>查看RFQs</button>
+								<hr />
+								<span> 报价请求</span>
+								<a href="#" class="products-account">0 Item</a>
+							</td>-->
+						</tr>
+					</table>
+				</div>
+				<div class="products" id="products">
+					<div class="products-nav">
+						<a href="../index.html" style="text-decoration: none;color: white;">主页</a>
+					</div>
+					<div class="products-introduction">
+						<br />
+						<p>该功能暂时不可用，请点击<a href="../index.html">这里</a>回到首页</p>
+					</div>
+				</div>
+
+			</div>
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>

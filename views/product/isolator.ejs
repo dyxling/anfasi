@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="安法斯" />
+		<title>南京安法斯通讯技术有限公司</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<style type="text/css">
+			.products-list a {
+				font-size: 13px;
+			}
+			
+			.products-list img {
+				border: 1px solid #8996A0;
+				width: 200px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="main-container">
+			<%-include('../header')%>
+			<!--主内容开始-->
+			<div id="main-body" class="main-body">
+				<%-include('searchmode')%>
+				<div class="products">
+					<div class="products-nav">
+						<a href="/" style="text-decoration: none;color: white;">主页</a>>
+						<a>环形器 & 隔离器</a>
+					</div>
+					<div class="products-introduction">
+						<br />
+						<h1>环形器 & 隔离器</h1>
+						<hr />
+					</div>
+				</div>
+				<div id="products-list" class="products-list">
+					<table>
+						<tr>
+							<td><img src="../img/drop-in.png" /></td>
+							<td>
+								<a href="../product/viewisolator?pname=<%=encodeURIComponent('嵌入式环形器、隔离器')%>">嵌入式环形器、隔离器</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/smd.png" /></td>
+							<td>
+								<a href="../product/viewisolator?pname=<%=encodeURIComponent('表面贴装式环形器、隔离器')%>">表面贴装式环形器、隔离器</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/coaxial.png" /></td>
+							<td>
+								<a href="../product/viewisolator?pname=<%=encodeURIComponent('同轴环形器、隔离器')%>">同轴环形器、隔离器</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/waveguide.png" /></td>
+							<td>
+								<a href="../product/viewisolator?pname=<%=encodeURIComponent('波导环形器、隔离器')%>">波导环形器、隔离器</a>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="../img/cable.png" /></td>
+							<td>
+								<a href="../product/viewisolator?pname=<%=encodeURIComponent('电缆负载组件')%>">电缆负载组件</a>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+				
+			</div>
+			<%-include('../footer')%>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/header.js"></script>
+
+	</body>
+
+</html>
